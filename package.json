@@ -1,0 +1,14 @@
+{
+  "name": "imacos",
+  "productName": "iMacOS",
+  "version": "1.0.0",
+  "description": "macOS Security Monitor - 全面了解你的 Mac 安全状况",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "@electron/packager": "^19.1.0",
+    "electron": "^33.0.0"
+  }
+}

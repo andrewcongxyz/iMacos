@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iMacOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Title Bar -->
+  <div class="titlebar">
+    <div class="titlebar-drag">
+      <span class="titlebar-title">iMacOS</span>
+      <span class="titlebar-subtitle">Security Monitor</span>
+    </div>
+    <div class="titlebar-actions">
+      <button id="btn-lang" class="btn-titlebar" title="Switch Language">
+        <span id="lang-label">EN</span>
+      </button>
+      <button id="btn-refresh" class="btn-titlebar btn-refresh" title="Refresh All">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M13.65 2.35A7.96 7.96 0 008 0C3.58 0 0 3.58 0 8s3.58 8 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 018 14 6 6 0 1114 8h-3l4 4 4-4h-3a7.96 7.96 0 00-2.35-5.65z" fill="currentColor" transform="scale(0.85) translate(1,1)"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tab Bar -->
+  <nav class="tab-bar">
+    <button class="tab active" data-tab="dashboard">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Dashboard</span>
+    </button>
+    <button class="tab" data-tab="processes">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+      </svg>
+      <span>Processes</span>
+    </button>
+    <button class="tab" data-tab="ports">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+      </svg>
+      <span>Ports</span>
+    </button>
+    <button class="tab" data-tab="startup">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="5,3 19,12 5,21"/>
+      </svg>
+      <span>Startup</span>
+    </button>
+    <button class="tab" data-tab="network">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/>
+      </svg>
+      <span>Network</span>
+    </button>
+  </nav>
+
+  <!-- Content Area -->
+  <main class="content">
+    <div id="tab-dashboard" class="tab-panel active"></div>
+    <div id="tab-processes" class="tab-panel"></div>
+    <div id="tab-ports" class="tab-panel"></div>
+    <div id="tab-startup" class="tab-panel"></div>
+    <div id="tab-network" class="tab-panel"></div>
+  </main>
+
+  <script src="i18n.js"></script>
+  <script src="modules/dashboard.js"></script>
+  <script src="modules/processes.js"></script>
+  <script src="modules/ports.js"></script>
+  <script src="modules/startup.js"></script>
+  <script src="modules/network.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
